@@ -1,0 +1,58 @@
+@include mobile {
+  .wrapper {
+    padding: 10px;
+  }
+  .login_wrap {
+    width: 100%;
+  }
+}
+
+@include tablet {
+  .wrapper {
+     > div > .aside-box {
+      display: none;
+    }
+    .navbar {
+      width: 100%;
+      justify-content: space-between;
+    }
+    
+    .main-panel {
+      .content {
+        .cnt_blah {
+          padding: 0px;
+        }
+      }
+    }
+  }
+  .menu_wrap {
+    .menu_icon {
+      display: block;
+      > span {
+        z-index: 1;
+      }
+    }
+    .menu_icon ~ div > .aside-box {
+      height: 0px;
+    }
+    .menu_icon:checked ~ div > .aside-box {
+      position: fixed;
+      background-color: #202226;
+      width: 100%;
+      top: 0px;
+      left: 0px;
+      height: 100vh;
+      > li {
+        text-align: center;
+      }
+    }
+  }
+  
+ 
+}
+
+@include desktop {
+  .menu_wrap {
+    display: none;
+  }
+}
