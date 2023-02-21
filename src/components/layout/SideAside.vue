@@ -1,6 +1,6 @@
 <template>
   <div>
-    <ul class="aside-box" :class="[menuProps ? 'on' : '']">
+    <ul class="aside-box" :class="[menuProps ? '' : 'on']">
       <li v-for="menu in routerMenu" :key="menu.path">
         <router-link :to="menu.path">{{menu.name}}</router-link>
       </li>

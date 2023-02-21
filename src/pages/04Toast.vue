@@ -21,7 +21,7 @@
     methods: {
       showToast() {
         this.isShow = true;
-        setTimeout(() => this.isShow = false, 5000);
+        setTimeout(() => this.isShow = false, 3000);
           
 
       }

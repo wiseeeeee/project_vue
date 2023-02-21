@@ -18,12 +18,6 @@
 import routes from "@/router/routes";
   export default {
     name: "top-menu",
-    props: {
-      // checked: {
-      //   type: Boolean,
-      //   default: false
-      // }
-    },
     data() {
       return {
         routerMenu: [],
