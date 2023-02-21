@@ -25,4 +25,7 @@ MRO구매 관리는 수많은 종류의 제품을 포괄하기에 구매 단계�
     
   }
 </script>
+<style lang="scss" scoped>
+  @import '@/assets/sass/pages/about.scss'
+</style>
 

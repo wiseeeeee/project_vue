@@ -1,8 +1,8 @@
 <template>
   <div class="wrapper">
-    <side-aside></side-aside>
+    <side-aside :menuProps="menuProps"></side-aside>
     <div class="main-panel">
-      <top-menu></top-menu>
+      <top-menu @inputToggle="menuToggle"></top-menu>
       <router-view></router-view>
     </div>
   </div>
@@ -15,10 +15,28 @@ import TopMenu from '@/components/layout/TopMenu'
 
 export default {
   name: 'app-layout',
+  props: {
+
+  },
   components: {
-    
     SideAside,
     TopMenu
+  },
+  data() {
+    return {
+      toggle: false,
+      menuProps: ''
+    }
+  },
+  methods: {
+    menuToggle(checked) {
+      
+      this.menuProps = checked;
+      console.log('toggle', this.menuProps )
+    }
+  },
+  created() {
+    console.log('applayout', this.toggle)
   }
 };
 </script>

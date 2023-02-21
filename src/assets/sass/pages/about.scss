@@ -1,0 +1,23 @@
+.content {
+  width: 100%;
+  padding-top: 50px;
+  text-align: center;
+  .title {
+    font-weight: 700;
+    text-align: center;
+    font-size: 60px;
+  }
+  .cnt_wrap {
+    padding: 20px;
+  }
+  .cnt_title {
+    color: #8fb6ff;
+    padding: 40px 0;
+    font-size: 30px;
+  }
+
+  .cnt_blah {
+    line-height: 40px;
+    padding: 0 80px;
+  }
+}

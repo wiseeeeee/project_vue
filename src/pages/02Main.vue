@@ -1,11 +1,9 @@
 <template>
-  <div>
-    <div>
-      <div v-for="number in [currentNumber]" :key="number" class="img_box">
-        <img :src="require(`@/assets/img/${images[Math.abs(currentNumber) % images.length]}`)" class="img_thumb"/>
-        <a @click="prev" class="prev"><i class="arrow left"></i></a>
-        <a @click="next" class="next"><i class="arrow right"></i></a>
-      </div>
+  <div class="carousel_wrap">
+    <div v-for="number in [currentNumber]" :key="number" class="img_box">
+      <img :src="require(`@/assets/img/${images[Math.abs(currentNumber) % images.length]}`)" class="img_thumb"/>
+      <a @click="prev" class="prev"><i class="arrow left"></i></a>
+      <a @click="next" class="next"><i class="arrow right"></i></a>
     </div>
   </div>
 </template>

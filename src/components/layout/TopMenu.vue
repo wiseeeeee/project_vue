@@ -1,38 +1,39 @@
 <template>
-  <div>
-    <nav class="navbar">
+  <div class="navbar">
       <ul>
         <li v-for="menu in routerMenu" :key="menu.path">
           <router-link :to="menu.path">{{menu.name}}</router-link>
         </li>
       </ul>
       <div class="menu_wrap">
-        <input type="checkbox" class="menu_icon"/>
+        <input type="checkbox" class="menu_icon" v-model="checked" @change="$emit('inputToggle', checked)"/>
         <span></span>
         <span></span>
         <span></span>
-        <SideAside />
-      </div>
-    </nav>
-    
+      </div>    
   </div>
 </template>
 
 <script>
 import routes from "@/router/routes";
-import SideAside from '@/components/layout/SideAside'
   export default {
     name: "top-menu",
-    components: {
-      SideAside
+    props: {
+      // checked: {
+      //   type: Boolean,
+      //   default: false
+      // }
     },
     data() {
       return {
-        routerMenu: []
+        routerMenu: [],
+        checked: false
       }
     },
+    methods: {
+    },
     created () {
-      this.routerMenu = routes[0].children;
+      this.routerMenu = [...routes[0].children];
     }
   }
 </script>

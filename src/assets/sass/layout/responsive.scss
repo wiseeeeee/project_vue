@@ -9,8 +9,23 @@
 
 @include tablet {
   .wrapper {
-     > div > .aside-box {
+    position: relative;
+    .aside-box {
       display: none;
+      &.on {
+        display:block;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        width: 100vw;
+        height: 100%;
+        background-color: $bgColor;
+        z-index: 6;
+        > li {
+          text-align: center;
+        }
+
+      }
     }
     .navbar {
       width: 100%;
@@ -29,26 +44,12 @@
     .menu_icon {
       display: block;
       > span {
-        z-index: 1;
-      }
-    }
-    .menu_icon ~ div > .aside-box {
-      height: 0px;
-    }
-    .menu_icon:checked ~ div > .aside-box {
-      position: fixed;
-      background-color: #202226;
-      width: 100%;
-      top: 0px;
-      left: 0px;
-      height: 100vh;
-      > li {
-        text-align: center;
+        position: relative;
+        z-index: 4;
       }
     }
   }
   
- 
 }
 
 @include desktop {

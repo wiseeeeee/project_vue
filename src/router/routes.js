@@ -1,6 +1,7 @@
 import Login from "@/pages/01Login.vue"
 import About from "@/pages/03About.vue"
 import Main from "@/pages/02Main.vue"
+import Toast from "@/pages/04Toast.vue"
 import ContentLayout from "@/components/layout/ContentLayout.vue"
 
 const topMenu = {
@@ -28,7 +29,12 @@ const sideMenu = {
       path:'main',
       name:'Main',
       component: Main
-  }
+    },
+    {
+      path:'toast',
+      name:'Toast',
+      component: Toast
+    }
   ]
 }
 

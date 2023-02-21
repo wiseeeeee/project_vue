@@ -6,7 +6,7 @@
 @import './layout/grid.scss';
 @import './layout/header.scss';
 @import './layout/navigation.scss';
-@import './layout/responsive.scss';
+
 @import './layout/sidebar.scss';
 
 //공통 컴포넌트
@@ -20,9 +20,10 @@
 @import './pages/about.scss';
 @import './pages/home.scss';
 @import './pages/login.scss';
+@import './pages/toast.scss';
 
 // app 테마 지정
 @import './themes/admin.scss';
 @import './themes/theme.scss';
 
-
+@import './layout/responsive.scss';

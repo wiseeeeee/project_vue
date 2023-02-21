@@ -1,5 +1,5 @@
 body {
-  background-color: #202226;
+  background-color: $bgColor;
   color: #fff;
   font-size: 1.2rem;
   
@@ -43,30 +43,6 @@ body {
     background-color: #202226;
     text-align: right;
   }
-  .content {
-    width: 100%;
-    padding-top: 50px;
-    text-align: center;
-    .title {
-      font-weight: 700;
-      text-align: center;
-      font-size: 60px;
-    }
-    .cnt_wrap {
-      padding: 20px;
-    }
-    .cnt_title {
-      color: #8fb6ff;
-      padding: 40px 0;
-      font-size: 30px;
-    }
-
-    .cnt_blah {
-      line-height: 40px;
-      padding: 0 80px;
-    }
-  }
-
 }
 .menu_wrap {
   position: relative;
@@ -76,7 +52,7 @@ body {
 
   .menu_icon {
     opacity: 0;
-    z-index: 2;
+    z-index: 5;
     position: absolute;
     width: 20px;
     height: 20px;
@@ -87,11 +63,11 @@ body {
     position: absolute;
     display:block;
     width: 20px;
-    height:2px;
+    height: 3px;
     border-radius: 40px;
     background:#fff;
-    transition: all 0.35s;  /* 진행되는 과정들을 천천히 보여줄 수 있다. 0.35초 동안 진행됨 */
-    z-index:1;
+    transition: all 0.35s; 
+    z-index:4;
   }
 
   > span:nth-child(1) {
@@ -106,57 +82,4 @@ body {
   > span:nth-child(3) {
     bottom:0px;
   }
-}
-.carousel_botton {
-  display: flex;
-  justify-content: space-around;
-}
-.img_box {
-  width: 90%;
-  height: 500px;
-  overflow: hidden;
-  margin: 0 auto;
-  position: relative;
-  .img_thumb {
-    width: 100%;
-    height: 100%;
-    object-fit:cover;
-  }
-  > a {
-    cursor: pointer;
-  }
-  .prev {
-    position: absolute;
-    top: 50%;
-    left: 35px;
-    transform: translate(-50%, 0);
-    z-index: 2;
-  }
-  .next {
-    position: absolute;
-    top: 50%;
-    right: 0px;
-    transform: translate(-50%, 0);
-  }
-}
-.arrow {
-  border: solid #fff;
-  border-width: 0 3px 3px 0;
-  display: inline-block;
-  padding: 10px;
-}
-
-.right {
-  transform: rotate(-45deg);
-  -webkit-transform: rotate(-45deg);
-}
-
-.left {
-  transform: rotate(135deg);
-  -webkit-transform: rotate(135deg);
-}
-.login_utile {
-  display: flex;
-  justify-content: space-between;
-  padding-top: 20px;
 }

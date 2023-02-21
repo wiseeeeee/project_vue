@@ -7,6 +7,9 @@
 <script>
 
   export default {
-    name: 'content-layout'
+    name: 'content-layout',
+    created() {
+       this.$forceUpdate();
+    }
   }
 </script>
